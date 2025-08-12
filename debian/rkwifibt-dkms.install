@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+
+src/drivers/infineon usr/src/cyw43455-${DEB_VERSION}/

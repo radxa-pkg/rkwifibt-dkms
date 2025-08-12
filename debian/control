@@ -5,6 +5,7 @@ Priority: standard
 Standards-Version: 4.6.0
 Build-Depends: debhelper (>=12~),
                devscripts,
+               dh-sequence-dkms,
                lintian,
                dh-exec,
                pandoc,
@@ -13,6 +14,17 @@ Package: rkwifibt-dkms
 Architecture: all
 Section: admin
 Priority: optional
+Depends: rkwifibt-firmware (= ${binary:Version}),
+         ${misc:Depends},
+Description: DKMS package for Rockchip WiFi/BT drivers
+ This package provides Dynamic Kernel Module Support (DKMS) for
+ Infineon CYW43455 wireless chipset support.
+
+Package: rkwifibt-firmware
+Architecture: all
+Section: misc
+Priority: optional
 Depends: ${misc:Depends},
-Description: rkwifibt-dkms
- This package provides the rkwifibt-dkms.
+Description: Rockchip WiFi/BT supplemental firmware
+ This package contains Rockchip WiFi/BT Infineon CYW43455 firmware that are not
+ shipped by Debian.
