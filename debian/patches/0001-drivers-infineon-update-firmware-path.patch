@@ -1,0 +1,26 @@
+From 2135855e246e7bcc8192b5a50802e39859c4be09 Mon Sep 17 00:00:00 2001
+From: Honglin Leng <dev@radxa.com>
+Date: Tue, 5 Aug 2025 06:22:21 +0000
+Subject: [PATCH] drivers: infineon: update firmware path
+
+Signed-off-by: Honglin Leng <dev@radxa.com>
+---
+ src/drivers/infineon/chips/CYW43455_Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/drivers/infineon/chips/CYW43455_Makefile b/src/drivers/infineon/chips/CYW43455_Makefile
+index 2d7ab0d..ef95000 100755
+--- a/src/drivers/infineon/chips/CYW43455_Makefile
++++ b/src/drivers/infineon/chips/CYW43455_Makefile
+@@ -540,7 +540,7 @@ ifeq ($(CONFIG_DHD_PLATFORM), Rockchip)
+     DHDCFLAGS += -DCONFIG_DHD_PLAT_ROCKCHIP
+     DHDCFLAGS += -DWL_ENABLE_P2P_IF
+     DHDCFLAGS += -DDHD_MAP_CHIP_FIRMWARE_PATH
+-    DHDCFLAGS += -DDHD_FIRMWARE_DIR_PATH=\"/vendor/etc/firmware\"
++    DHDCFLAGS += -DDHD_FIRMWARE_DIR_PATH=\"/lib/firmware/infineon/CYW43455\"
+ ifeq ($(CONFIG_BCMDHD_SDIO),y)
+ #    DHDCFLAGS += -DDHD_OF_SUPPORT
+ #    DHDCFLAGS += -DDHD_CUSTOM_PLAT_DATA
+-- 
+2.39.5
+
