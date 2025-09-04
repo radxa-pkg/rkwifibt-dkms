@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+
+src/drivers/bcmdhd usr/src/bcmdhd-${DEB_VERSION}/

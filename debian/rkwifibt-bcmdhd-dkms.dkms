@@ -1,0 +1,6 @@
+PACKAGE_NAME="bcmdhd"
+PACKAGE_VERSION="#MODULE_VERSION#"
+BUILT_MODULE_NAME[0]="bcmdhd"
+DEST_MODULE_LOCATION[0]="/updates/dkms"
+MAKE[0]="make -C bcmdhd -j$(nproc) KVER=${kernelver} LINUXDIR=/lib/modules/${kernelver}/build bcmdhd_sdio"
+BUILT_MODULE_LOCATION[0]="bcmdhd/"

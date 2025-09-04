@@ -1,0 +1,56 @@
+From b72b5e2332047f5e633f7e6376c7296bacc96ee1 Mon Sep 17 00:00:00 2001
+From: Honglin Leng <dev@radxa.com>
+Date: Thu, 28 Aug 2025 03:45:01 +0000
+Subject: [PATCH 2/2] drivers: bcmdhd: modify firmware path to
+ /lib/firmware/brcm
+
+Signed-off-by: Honglin Leng <dev@radxa.com>
+---
+ drivers/bcmdhd/Kconfig  | 4 ++--
+ drivers/bcmdhd/Makefile | 8 ++++----
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/src/drivers/bcmdhd/Kconfig b/src/drivers/bcmdhd/Kconfig
+index b5f1b53..cac45ca 100644
+--- a/src/drivers/bcmdhd/Kconfig
++++ b/src/drivers/bcmdhd/Kconfig
+@@ -29,14 +29,14 @@ config BCMDHD
+ config BCMDHD_FW_PATH
+ 	depends on BCMDHD
+ 	string "Firmware path"
+-	default "/system/etc/firmware/fw_bcmdhd.bin"
++	default "/lib/firmware/brcm/fw_bcmdhd.bin"
+ 	help
+ 	  Path to the firmware file.
+ 
+ config BCMDHD_NVRAM_PATH
+ 	depends on BCMDHD
+ 	string "NVRAM path"
+-	default "/system/etc/firmware/nvram.txt"
++	default "/lib/firmware/brcm/nvram.txt"
+ 	help
+ 	  Path to the calibration file.
+ 
+diff --git a/src/drivers/bcmdhd/Makefile b/src/drivers/bcmdhd/Makefile
+index 061c22f..fe97381 100644
+--- a/src/drivers/bcmdhd/Makefile
++++ b/src/drivers/bcmdhd/Makefile
+@@ -436,11 +436,11 @@ ifeq ($(CONFIG_BCMDHD_REQUEST_FW),y)
+ else
+ 	DHDCFLAGS += -DDHD_SUPPORT_VFS_CALL
+ ifeq ($(CONFIG_BCMDHD_FW_PATH),)
+-	DHDCFLAGS += -DCONFIG_BCMDHD_FW_PATH="\"/vendor/etc/firmware/fw_bcmdhd.bin\""
+-	DHDCFLAGS += -DCONFIG_BCMDHD_NVRAM_PATH="\"/vendor/etc/firmware/nvram.txt\""
+-	DHDCFLAGS += -DCONFIG_BCMDHD_CLM_PATH="\"/vendor/etc/firmware/clm_bcmdhd.blob\""
++	DHDCFLAGS += -DCONFIG_BCMDHD_FW_PATH="\"/lib/firmware/brcm/fw_bcmdhd.bin\""
++	DHDCFLAGS += -DCONFIG_BCMDHD_NVRAM_PATH="\"/lib/firmware/brcm/nvram.txt\""
++	DHDCFLAGS += -DCONFIG_BCMDHD_CLM_PATH="\"/lib/firmware/brcm/clm_bcmdhd.blob\""
+ endif
+-	DHDCFLAGS += -DCONFIG_BCMDHD_CONFIG_PATH="\"/vendor/etc/firmware/config.txt\""
++	DHDCFLAGS += -DCONFIG_BCMDHD_CONFIG_PATH="\"/lib/firmware/brcm/config.txt\""
+ endif
+ 
+ ifeq ($(CONFIG_BCMDHD_FW_SIGNATURE),y)
+-- 
+2.49.0
+
