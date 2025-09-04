@@ -9,8 +9,9 @@ Build-Depends: debhelper (>=12~),
                lintian,
                dh-exec,
                pandoc,
+               dos2unix,
 
-Package: rkwifibt-dkms
+Package: rkwifibt-infineon-dkms
 Architecture: all
 Section: admin
 Priority: optional
@@ -19,6 +20,15 @@ Depends: rkwifibt-firmware (= ${binary:Version}),
 Description: DKMS package for Rockchip WiFi/BT drivers
  This package provides Dynamic Kernel Module Support (DKMS) for
  Infineon CYW43455 wireless chipset support.
+
+Package: rkwifibt-bcmdhd-dkms
+Architecture: all
+Section: admin
+Priority: optional
+Depends: ${misc:Depends},
+Description: DKMS package for Rockchip WiFi/BT drivers
+ This package provides Dynamic Kernel Module Support (DKMS) for
+ Broadcom ap6256 wireless chipset support.
 
 Package: rkwifibt-firmware
 Architecture: all

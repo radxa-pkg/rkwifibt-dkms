@@ -1,6 +1,6 @@
-PACKAGE_NAME="cyw43455"
+PACKAGE_NAME="rkwifibt-infineon"
 PACKAGE_VERSION="#MODULE_VERSION#"
-BUILT_MODULE_NAME[0]="$PACKAGE_NAME"
+BUILT_MODULE_NAME[0]="cyw43455"
 DEST_MODULE_LOCATION[0]="/updates/dkms"
 MAKE[0]="make -C infineon -j$(nproc) KVER=${kernelver} KDIR=/lib/modules/${kernelver}/build"
 BUILT_MODULE_LOCATION[0]="infineon/"

@@ -1,0 +1,33 @@
+From c5a6f0bb0db8377c5e4ba36ac4da9d513eeaebb6 Mon Sep 17 00:00:00 2001
+From: Honglin Leng <dev@radxa.com>
+Date: Sun, 31 Aug 2025 16:51:06 +0800
+Subject: [PATCH] drivers: infineon: add ap6256 support
+
+Signed-off-by: Honglin Leng <dev@radxa.com>
+---
+ src/drivers/infineon/dhd_linux.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/drivers/infineon/dhd_linux.c b/src/drivers/infineon/dhd_linux.c
+index 7393730..b961615 100644
+--- a/src/drivers/infineon/dhd_linux.c
++++ b/src/drivers/infineon/dhd_linux.c
+@@ -9552,12 +9552,15 @@ DHD_FW_NV_DEFINE(CYW5557x,         "cyw5557x_sdio.bin",    "cyw5557x_sdio.txt",
+ DHD_FW_NV_DEFINE(CYW54591,         "cyw54591_pcie.bin",    "cyw54591_pcie.txt",    "cyw54591.clm_blob");
+ DHD_FW_NV_DEFINE(CYW5557x,         "cyw5557x_pcie.bin",    "cyw5557x_pcie.txt",    "cyw5557x.clm_blob");
+ #endif /* BCMPCIE */
++DHD_FW_NV_DEFINE(BCM43456,         "fw_bcm43456c5_ag.bin",    "nvram_ap6256.txt",    "clm_bcm43456c5_ag.blob");
+ 
+ static dhd_chip_fw_nv_map_t dhd_fw_nv_table[] = {
+     DHD_FW_NV_ENTRY(CYW43438,          BCM43430_CHIP_ID,   1,      0),
+     DHD_FW_NV_ENTRY(CYW43438_AZW,      BCM43430_CHIP_ID,   1,      0x81),
+     DHD_FW_NV_ENTRY(CYW43455,          BCM4345_CHIP_ID,    6,      0),
+     DHD_FW_NV_ENTRY(CYW43455_AZW,      BCM4345_CHIP_ID,    6,      0x81),
++    DHD_FW_NV_ENTRY(BCM43456,          BCM4345_CHIP_ID,    9,      0),
++    DHD_FW_NV_ENTRY(BCM43456,          BCM4345_CHIP_ID,    9,      0x81),
+     DHD_FW_NV_ENTRY(CYW4354,           BCM4354_CHIP_ID,    0,      0),
+     DHD_FW_NV_ENTRY(CYW4354_AZW,       BCM4354_CHIP_ID,    0,      0x81),
+     DHD_FW_NV_ENTRY(CYW4373,           BCM4373_CHIP_ID,    0,      0),
+-- 
+2.34.1
+

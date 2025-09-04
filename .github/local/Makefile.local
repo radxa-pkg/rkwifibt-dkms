@@ -1,0 +1,5 @@
+pre_debuild: fix_crlf
+
+.PHONY: fix_crlf
+fix_crlf:
+	dos2unix --allow-chown -o src/drivers/infineon/dhd_linux.c
