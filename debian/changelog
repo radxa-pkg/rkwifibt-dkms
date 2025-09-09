@@ -1,5 +1,10 @@
-rkwifibt-dkms (0.1.0-1) UNRELEASED; urgency=medium
+rkwifibt-dkms (0.1.0-1) unstable; urgency=medium
 
+  [ "Radxa Computer Co., Ltd" ]
   * Add initial Debian packaging support
 
- -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Thu, 01 Jan 1970 08:00:00 +0800
+  [ Honglin Leng ]
+  * feat: add initial rkwifibt-dkms support
+  * feat: add bcmdhd-dkms support
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 09 Sep 2025 09:47:40 +0000
