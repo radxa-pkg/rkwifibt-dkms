@@ -1,0 +1,26 @@
+From d7a1be88c864461bf9dd7aa6891a1a2cd59058b3 Mon Sep 17 00:00:00 2001
+From: Honglin Leng <dev@radxa.com>
+Date: Sun, 14 Sep 2025 03:32:39 +0000
+Subject: [PATCH] fix: disable WL_STATIC_IF to prevent dual wlan interfaces
+
+Signed-off-by: Honglin Leng <dev@radxa.com>
+---
+ src/drivers/bcmdhd/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/drivers/bcmdhd/Makefile b/src/drivers/bcmdhd/Makefile
+index c673785..466158c 100644
+--- a/src/drivers/bcmdhd/Makefile
++++ b/src/drivers/bcmdhd/Makefile
+@@ -119,7 +119,7 @@ ifneq ($(CONFIG_CFG80211),)
+ 	DHDCFLAGS += -DROAM_CHANNEL_CACHE -DDHD_LOSSLESS_ROAMING
+ #	DHDCFLAGS += -DWL_CFGVENDOR_SEND_HANG_EVENT
+ 	DHDCFLAGS += -DGTK_OFFLOAD_SUPPORT
+-	DHDCFLAGS += -DWL_STATIC_IF #-DDHD_MAX_STATIC_IFS=2
++#	DHDCFLAGS += -DWL_STATIC_IF #-DDHD_MAX_STATIC_IFS=2
+ 	DHDCFLAGS += -DWL_CLIENT_SAE
+ 	DHDCFLAGS += -DCONNECT_INFO_WAR -DWL_ROAM_WAR
+ 	DHDCFLAGS += -DVNDR_IE_WAR
+-- 
+2.49.0
+

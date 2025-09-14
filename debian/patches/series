@@ -2,3 +2,4 @@
 0002-drivers-bcmdhd-update-firmware-path.patch
 0003-drivers-bcmdhd-Modify-Makefile-to-use-CURDIR.patch
 0004-drivers-infineon-add-ap6256-support.patch
+0005-fix-disable-WL_STATIC_IF-to-prevent-dual-wlan-interfaces.patch
