@@ -1,3 +1,10 @@
+rkwifibt-dkms (0.1.0-2) unstable; urgency=medium
+
+  [ Honglin Leng ]
+  * fix: disable WL_STATIC_IF to prevent dual wlan interfaces
+
+ -- "Radxa Computer Co., Ltd" <dev@radxa.com>  Tue, 21 Oct 2025 08:33:32 +0000
+
 rkwifibt-dkms (0.1.0-1) unstable; urgency=medium
 
   [ "Radxa Computer Co., Ltd" ]
