@@ -1,3 +1,4 @@
 #!/usr/bin/dh-exec
 
 src/drivers/infineon usr/src/rkwifibt-infineon-${DEB_VERSION}/
+infineon-config/usr /
